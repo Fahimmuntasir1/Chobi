@@ -7,8 +7,11 @@ import matplotlib.pyplot as plt
 # read image from file
 img = cv2.imread("nature.jpg")
 
+# to gray image
+# grayImg = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-grayImg = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+# resized = cv2.resize(img, (1080, 720))
 
-plt.imshow(grayImg, cmap="gray")
+rotated90 = cv2.blur(img, (15, 15), 0)
+plt.imshow(rotated90, cmap="gray")
 plt.show()
