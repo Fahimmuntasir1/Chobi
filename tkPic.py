@@ -12,6 +12,7 @@ img = cv2.imread("nature.jpg")
 
 # resized = cv2.resize(img, (1080, 720))
 
-rotated90 = cv2.blur(img, (15, 15), 0)
-plt.imshow(rotated90, cmap="gray")
+# rotated90 = cv2.blur(img, (15, 15), 0)
+blurred = cv2.GaussianBlur(img, (15, 15), 0)
+plt.imshow(blurred, cmap="gray")
 plt.show()
