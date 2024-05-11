@@ -1,11 +1,14 @@
 # TKPiC - Image processing application.
 import cv2
+import numpy as np
+from skimage.io import imread
+import matplotlib.pyplot as plt
 
 # read image from file
-img = cv2.imread("img/nature.jpg")
+img = cv2.imread("nature.jpg")
 
-imGray = cv2.cvtColor(img, cv2.COLOR_BAYER_BG2GRAY)
-# to show image
-cv2.imshow("output", img)
 
-cv2.waitKey(0)
+grayImg = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+plt.imshow(grayImg, cmap="gray")
+plt.show()
